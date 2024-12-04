@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Intelligence Suite</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 20px;
+            width: 300px;
+            background-color: #0a0f0d;
+            color: #00ff41;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid #00ff41;
+            padding-bottom: 10px;
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+        }
+
+        button {
+            background-color: rgba(0, 255, 65, 0.1);
+            color: #00ff41;
+            border: 1px solid #00ff41;
+            padding: 10px 20px;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background-color: rgba(0, 255, 65, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+        }
+
+        #status {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+
+        .terminal-line {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .terminal-line::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: #00ff41;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background-color: #00ff41;
+            animation: blink 1s infinite;
+            margin-left: 5px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>MARKET INTELLIGENCE SUITE</h1>
+    <div class="terminal-line">System Status: ACTIVE</div>
+    <div class="terminal-line">Pattern Recognition: ENABLED</div>
+    <button id="startTool">Initialize Analysis</button>
+    <div id="status">
+        Ready for market analysis<span class="cursor"></span>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
